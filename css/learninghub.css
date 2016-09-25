@@ -1,0 +1,292 @@
+#mainbody {
+    /*padding: 0px;*/
+}
+
+/*
+*Navigation Styles
+*
+*/
+
+.navbar, .navbar.navbar-default {
+    background-color: #FFFFFF;
+    color: #1BBC9B;
+}
+
+#mainbody .navbar, .navbar.navbar-default {
+    border-bottom: 1px solid #1BBC9B;
+    height: 70px;
+}
+
+#mainbody .navbar-brand .fa-magic {
+    font-size: 30px;
+    padding: 5px;
+}
+#mainbody .navbar-brand .logotext{
+     font-size: 32px;
+     font-weight: 400;
+ }
+#mainbody .navbar-brand .productName{
+    color: #1E824C;
+    padding: 0px 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+#mainbody .navbar-brand .productName .productCaption{
+    color: black;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/*
+*LearningPath Styles
+*
+*/
+
+#learnbardiv{
+    margin-bottom: 15px;
+}
+#learningPaths .pagination{
+    padding: 0px;
+    margin: 10px 0;
+    border-radius: 0px !important;
+}
+#pathsNameList>li:first-child>a,#pathsNameList>li:last-child>a {
+    border-radius: 0px;
+}
+
+
+#contentBody{
+    margin:15px;
+}
+
+/*
+*LeftNavBar Styles
+*
+*/
+
+#leftNavBar{
+    border-right: 2px solid #16A085;
+}
+
+#leftNavBar label{
+    color: #000;
+}
+
+#leftNavBar .form-group .sortbtn {
+     text-align: center;
+     font-size: 20px;
+     font-weight: 400;
+     color: grey;
+     border : 1px solid #1BBC9B;
+     border-radius: 2px;
+     padding: 5px;
+ }
+.sortbtn .fa-sort{
+    float: left;
+    padding: 5px 10px;
+}
+#leftNavBar .form-group#sortopts{
+    border : 1px solid #1BBC9B;
+    padding: 5px;
+}
+
+#sortopts .radio{
+    margin:10px 5px;
+}
+
+.upvbtn{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: grey;
+    border : 1px solid #1BBC9B;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 100px;
+}
+.upvbtn .uptxt{
+    color:#000;
+}
+
+/*
+* Right side Search button Styles
+*
+*/
+.searchIcon{
+    width:30%;
+}
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;
+}
+
+.left-inner-addon .form-control{
+    border-bottom-width: 2px;
+    border-bottom-color: #1BBC9B !important;
+    background-color: #FFFFFF;
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+.left-inner-addon .well{
+    margin-left: 10px;
+}
+
+
+
+/*
+*courseCard Styles
+*
+*/
+.courseCard{
+    margin: 15px;
+    padding: 15px;
+}
+#courseList{
+    margin: 0px;
+}
+.row{
+    margin-right:0px;
+}
+
+.courseCard .courseImg{
+    width:100%
+}
+
+.courseInfoBlock .form-group .sortbtn {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: floralwhite;
+    border : 1px solid #1BBC9B;
+    border-radius: 0px;
+    padding: 5px;
+    background-color:#1BA39C ;
+}
+.courseCard .courseInfoBlock .courseTags p{
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.courseCard .courseInfoBlock .courseTags p .fa-tags{
+    font-size: 18px;
+    color : #4B77BE;
+    padding: 0 10px;
+}
+/**
+*votesblock
+*/
+
+.courseCard .courseInfoBlock .votesBlock{
+    vertical-align: bottom;
+    margin-top: 120px;
+    background-color: #e1f3f0;
+}
+.courseCard .courseInfoBlock .votesBlock .upVoteBlock{
+     padding: 0 15px;
+ }
+.courseCard .courseInfoBlock .votesBlock .downVoteBlock{
+    padding-right:15px;
+}
+.courseCard .courseInfoBlock .votesBlock .upVoteBlock .fa-thumbs-up{
+    font-size: 24px;
+    padding: 5px;
+    color: #1BA39C;
+}
+.courseCard .courseInfoBlock .votesBlock .downVoteBlock .fa-thumbs-down{
+    font-size: 24px;
+    padding: 5px;
+    color: #E74C3C;
+}
+
+.courseCard .courseInfoBlock .votesBlock .upVoteBlock .upvotecount{
+    font-size: 16px;
+    font-weight: 400;
+}
+.courseCard .courseInfoBlock .votesBlock .downVoteBlock .downvotecount{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/**
+*paramsblock
+*/
+
+.courseCard .courseInfoBlock .paramsBlock{
+    vertical-align: bottom;
+    margin-top: 120px;
+    background-color: #e1f3f0;
+}
+.courseCard .courseInfoBlock .paramsBlock .learnBlock{
+    padding: 0 15px;
+}
+.courseCard .courseInfoBlock .paramsBlock .hourBlock{
+    padding: 0 15px;
+}
+.courseCard .courseInfoBlock .paramsBlock .learnBlock .fa-user{
+    font-size: 24px;
+    padding: 5px;
+    color: #1BA39C;
+}
+.courseCard .courseInfoBlock .paramsBlock .hourBlock .fa-clock-o{
+    font-size: 24px;
+    padding: 5px;
+    color: #E74C3C;
+}
+
+.courseCard .courseInfoBlock .paramsBlock .learnBlock .learncount{
+    font-size: 16px;
+    font-weight: 400;
+}
+.courseCard .courseInfoBlock .paramsBlock .hourBlock .hourcount{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/**
+*course Desc Block
+*/
+.courseCard .courseDescBlock{
+    margin: 15px;
+}
+.courseCard .courseDesc {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: #e1f3f0;
+}
+.courseCard .courseDesc p {
+    padding: 10px;
+    font-size: 14px;
+}
+.acourseLinkBlock{
+    margin: 15px;
+    background-color: #65C6BB !important;
+    color: #fff;
+}
+.acourseLinkBlock .courseLink{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+}
+.acourseLinkBlock .courseLink:hover{
+    text-decoration: none;
+}
+.acourseLinkBlock .courseLink .fa-link{
+    float: left;
+    padding: 5px;
+}
+/*
+*Responsive Corrections Styles
+*
+*/
+@media (max-width : 640px) {
+    #mainbody .navbar-brand .productName .productCaption{
+        display: none;
+    }
+}

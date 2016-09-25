@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Springboard Course Hub</title>
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"
+          href="bootstrap-material-design/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-material-design/dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-material-design/dist/css/ripples.min.css">
+    <script src="https://use.fontawesome.com/5e6f91f6b0.js"></script>
+    <!-- LearningHub Specific CSS -->
+    <link rel="stylesheet" type="text/css" href="css/learninghub.css"/>
+</head>
+<body>
+<div class="container-fluid" id="mainbody">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><i class="fa fa-magic"></i><span
+                            class="logotext">Springboard</span><span class="productName">LearningHub<span
+                            class="productCaption">- one stop hub for all learning paths</span></span></a>
+                </div>
+
+            </nav>
+            <div class="row" id="learningPaths">
+                <div class="col-md-12" id="learnbardiv">
+                    <ul class="pagination pagination-lg well" id="pathsNameList">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 well" id="contentBody">
+                    <div class="col-md-3" id="leftNavBar">
+                        <div class="form-group">
+                            <div class="sortbtn"><i class="fa fa-sort"></i>Sort by</div>
+                        </div>
+
+                        <div class="form-group" id="sortopts">
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="sortby" value="up" checked=""><span class="circle"></span><span
+                                        class="check"></span>
+                                    Vote (Up)
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="sortby" value="down"><span class="circle"></span><span
+                                        class="check"></span>
+                                    Vote (Down)
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="sortby" value="learn"><span class="circle"></span><span
+                                        class="check"></span>
+                                    Learners
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="sortby" value="duration"><span class="circle"></span><span
+                                        class="check"></span>
+                                    Duration
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="upvbtn"><span class="uptxt">Total up votes</span><span
+                                    class="upcount">: 61</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-9" id="rightContent">
+                        <div class="searchIcon">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-search"></i>
+                                <input type="search"
+                                       class="form-control well"
+                                       placeholder="Search"/>
+                            </div>
+                        </div>
+
+                        <div class="row" id="courseList">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="courseCard-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="col-md-12 well courseCard"id="{{id}}">
+            <div class="row">
+                <div class="col-md-4 courseThumbnail">
+                    <img alt="Bootstrap Image Preview"
+                         src="{{image}}"
+                         class="thumbnail courseImg"/>
+                </div>
+                <div class="col-md-8 courseInfoBlock">
+                    <div class="form-group">
+                        <div class="sortbtn">{{name}}</div>
+                    </div>
+                    <div class="courseTags">
+                        <p class="text-left"><i class="fa fa-tags"></i>{{tags}}</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="votesBlock pull-left">
+                                <div class="upVoteBlock pull-left">
+                                    <i class="fa fa-thumbs-up"></i><span
+                                        class="upvotecount">10</span>
+                                </div>
+                                <div class="downVoteBlock pull-left">
+                                    <i class="fa fa-thumbs-down"></i><span
+                                        class="downvotecount">3</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="paramsBlock pull-right">
+                                <div class="learnBlock pull-left">
+                                    <i class="fa fa-user"></i><span
+                                        class="learncount">{{learner}}</span>
+                                </div>
+                                <div class="hourBlock pull-left">
+                                    <i class="fa fa-clock-o"></i><span
+                                        class="hourcount">{{hours}}</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 courseDescBlock">
+                        <div class="courseDesc">
+
+                            <p class="text-justify"><h4>About Course</h4>{{description}}</p>
+                        </div>
+                        <div class="col-md-3 well well-sm pull-right acourseLinkBlock">
+                            <a class="courseLink"
+                               href="{{sign_up}}" target="_blank">
+                                <i class="fa fa-link"></i> View Curriculum
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script id="lpathsNavBar-template" type="text/x-handlebars-template">
+        <li>
+            <a href="#" id="prev">&lt;&lt;</a>
+        </li>
+        {{#each this}}
+        <li>
+            <a href="#" id="{{id}}">{{name}}</a>
+        </li>
+        {{/each}}
+        <li>
+            <a href="#" id="next">&gt;&gt;</a>
+        </li>
+    </script>
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <script src="bootstrap-material-design/bower_components/handlebars/handlebars.min.js"></script>
+    <!--<script src="bootstrap-material-design/bower_components/handlebars/handlebars.runtime.min.js"></script>-->
+    <script src="js/jstorage.js"></script>
+    <script src="js/learninghub.js"></script>
+</body>
+</html>
