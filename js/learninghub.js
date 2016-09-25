@@ -97,7 +97,7 @@ function bindEvents(){
 
 $(document).ready(function () {
     var params = {
-        local: true
+        local: false
     };
     getDataFromServer(params);
     updatePathsNavBar();
