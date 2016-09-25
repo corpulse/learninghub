@@ -4,7 +4,7 @@
 
 function getDataFromServer(param) {
     if (param && param.local) {
-        var uriLink = "/LearningHub/json/data.json";
+        var uriLink = "/learninghub/json/data.json";
     } else {
         uriLink = "https://hackerearth.0x10.info/api/learning-paths?type=json&query=list_paths";
     }
